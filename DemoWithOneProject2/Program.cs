@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DemoWithOneProject2
 {
@@ -8,7 +9,22 @@ namespace DemoWithOneProject2
         {
             ClearAndInItDatabase();
             DisplayAllFruits();
+            DisplayJustSkenfrukter();
 
+        }
+
+        private static void DisplayJustSkenfrukter()
+        {
+            var dataAccess = new DataAccess();
+            List<Fruit> fruits = dataAccess.GetFruitsInCategory("Exotisk");
+            Console.WriteLine();
+            Console.WriteLine("SKENFRUKTER");
+            Console.WriteLine();
+
+            foreach (var fruit in fruits)
+            {
+                Console.WriteLine(fruit.Name);
+            }
         }
 
         private static void DisplayAllFruits()

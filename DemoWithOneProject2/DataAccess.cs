@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DemoWithOneProject2
@@ -34,6 +35,10 @@ namespace DemoWithOneProject2
 
         }
 
+        internal IEnumerable<Fruit> GetFruitsInCategory(string v)
+        {
+            return _context.Fruits.Where(x => x.Category.Name == v); //.ToList();
+
         internal IEnumerable<Fruit> GetAll()
         {
             return _context.Fruits.Include(x=>x.Category);
@@ -45,11 +50,11 @@ namespace DemoWithOneProject2
             //foreach
             //remove
 
-
             foreach (var item in _context.FruitCategories )
             {
                 _context.Remove(item);
             }
+
             foreach (var item in _context.Fruits)
             {
                 _context.Remove(item);
