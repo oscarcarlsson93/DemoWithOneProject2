@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -30,6 +31,12 @@ namespace DemoWithOneProject2
 
 
             _context.SaveChanges();
+
+        }
+
+        internal IEnumerable<Fruit> GetAll()
+        {
+            return _context.Fruits.Include(x=>x.Category);
 
         }
 
