@@ -28,7 +28,7 @@ namespace DemoWithOneProject2
             _context.Fruits.Add(new Fruit { Name = "Passionsfrukt", Category = saftig });
             _context.Fruits.Add(new Fruit { Name = "Apelsin", Category = exotisk });
 
-            _context.SaveChanges();
+            //_context.SaveChanges();
 
         }
 
