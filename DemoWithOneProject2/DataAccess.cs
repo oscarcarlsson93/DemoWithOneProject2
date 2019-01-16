@@ -24,15 +24,34 @@ namespace DemoWithOneProject2
             _context.FruitCategories.Add(saftig);
             _context.FruitCategories.Add(exotisk);
 
-            _context.Fruits.Add(new Fruit { Name = "Mango", Category = skenfrukt });
-            _context.Fruits.Add(new Fruit { Name = "Passionsfrukt", Category = saftig });
-            _context.Fruits.Add(new Fruit { Name = "Apelsin", Category = exotisk });
+            _context.Fruits.Add(new Fruit { Name = "Mango", Category = skenfrukt, Price = 13 });
+            _context.Fruits.Add(new Fruit { Name = "Passionsfrukt", Category = saftig, Price = 10 });
+            _context.Fruits.Add(new Fruit { Name = "Apelsin", Category = exotisk, Price = 15});
 
-            //_context.SaveChanges();
+
+            _context.SaveChanges();
 
         }
 
+        internal void ClearDatabase()
+        {
+            //foreach
+            //remove
 
+
+            foreach (var item in _context.FruitCategories )
+            {
+                _context.Remove(item);
+            }
+            foreach (var item in _context.Fruits)
+            {
+                _context.Remove(item);
+            }
+           // _context.RemoveRange(Fruit);
+
+            _context.SaveChanges();
+
+        }
     }
 }
 

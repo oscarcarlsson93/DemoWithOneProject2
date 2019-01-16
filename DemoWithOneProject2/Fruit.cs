@@ -8,7 +8,7 @@ namespace DemoWithOneProject2
     {
         public int Id { get; set; }
         public string Name { get; set; }
-       //public decimal? Price { get; set; } //? = kan vara Null i databasen
+        public decimal? Price { get; set; } //? = kan vara Null i databasen
         public FruitCategory Category { get; set; }
     }
 }

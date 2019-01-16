@@ -29,6 +29,8 @@ namespace DemoWithOneProject2.Migrations
 
                     b.Property<string>("Name");
 
+                    b.Property<decimal?>("Price");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");

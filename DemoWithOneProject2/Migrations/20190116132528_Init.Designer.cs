@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DemoWithOneProject2.Migrations
 {
     [DbContext(typeof(Fruitcontext))]
-    [Migration("20190116104846_Init")]
+    [Migration("20190116132528_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,6 +30,8 @@ namespace DemoWithOneProject2.Migrations
                     b.Property<int?>("CategoryId");
 
                     b.Property<string>("Name");
+
+                    b.Property<decimal?>("Price");
 
                     b.HasKey("Id");
 

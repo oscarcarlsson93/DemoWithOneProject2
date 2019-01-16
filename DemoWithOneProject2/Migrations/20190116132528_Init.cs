@@ -27,6 +27,7 @@ namespace DemoWithOneProject2.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: true),
+                    Price = table.Column<decimal>(nullable: true),
                     CategoryId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>

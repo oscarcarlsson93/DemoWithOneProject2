@@ -13,7 +13,7 @@ namespace DemoWithOneProject2
         private static void ClearAndInItDatabase()
         {
             var dataAccess = new DataAccess();
-            //dataAccess.ClearDatabase();
+            dataAccess.ClearDatabase();
             dataAccess.AddCategoriesAndFruits();
 
 
