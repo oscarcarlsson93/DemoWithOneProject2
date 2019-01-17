@@ -19,5 +19,13 @@ namespace DemoWithOneProject2
                 optionsBuilder.UseSqlServer("Server = (localdb)\\mssqllocaldb; Database = DemoWithOneProject2;");
             }
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder) //för att skapa en mellannyckel, tabell med många relationer <-->
+        {
+            modelBuilder.Entity<FruitInBasket>()
+                .HasKey(x => new { x.FruitId, x.BasketId });
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

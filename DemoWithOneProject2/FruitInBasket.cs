@@ -6,6 +6,7 @@ namespace DemoWithOneProject2
 {
     class FruitInBasket
     {
+
         public int FruitId { get; set; }
         public Fruit Fruit { get; set; }
 

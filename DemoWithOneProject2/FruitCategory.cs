@@ -8,7 +8,7 @@ namespace DemoWithOneProject2
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        //public List<Fruit> FruitsInCategory { get; set; }
+        public List<Fruit> FruitsInCategory { get; set; }
 
     }
 }
