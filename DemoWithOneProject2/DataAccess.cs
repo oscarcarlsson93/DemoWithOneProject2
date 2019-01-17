@@ -38,6 +38,7 @@ namespace DemoWithOneProject2
         internal IEnumerable<Fruit> GetFruitsInCategory(string v)
         {
             return _context.Fruits.Where(x => x.Category.Name == v); //.ToList();
+        }
 
         internal IEnumerable<Fruit> GetAll()
         {

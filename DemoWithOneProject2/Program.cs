@@ -16,7 +16,7 @@ namespace DemoWithOneProject2
         private static void DisplayJustSkenfrukter()
         {
             var dataAccess = new DataAccess();
-            List<Fruit> fruits = dataAccess.GetFruitsInCategory("Exotisk");
+            IEnumerable<Fruit> fruits = dataAccess.GetFruitsInCategory("Exotisk");
             Console.WriteLine();
             Console.WriteLine("SKENFRUKTER");
             Console.WriteLine();
